@@ -3,7 +3,7 @@ PRIVCHECK is a comprehensive static analysis system refactored to align with cor
 Key Features & Methodology
 The tool effectively audits system commands by moving through three distinct stages:
 
--Lexical Analysis: Utilizes a DFA-based scanner to transform source scripts into specific tokens such as SUDO, FLAG, PATH, and PERM.
+- Lexical Analysis: Utilizes a DFA-based scanner to transform source scripts into specific tokens such as SUDO, FLAG, PATH, and PERM.
 
 -Syntactic Analysis: Enforces structural standards based on a custom Context-Free Grammar (CFG) and generates an Abstract Syntax Tree (AST) to understand command hierarchies.
 
