@@ -5,27 +5,27 @@ The tool effectively audits system commands by moving through three distinct sta
 
 - Lexical Analysis: Utilizes a DFA-based scanner to transform source scripts into specific tokens such as SUDO, FLAG, PATH, and PERM.
 
--Syntactic Analysis: Enforces structural standards based on a custom Context-Free Grammar (CFG) and generates an Abstract Syntax Tree (AST) to understand command hierarchies.
+- Syntactic Analysis: Enforces structural standards based on a custom Context-Free Grammar (CFG) and generates an Abstract Syntax Tree (AST) to understand command hierarchies.
 
--Semantic Analysis: Performs logical verification to detect risks that are syntactically correct but semantically dangerous, such as:
+- Semantic Analysis: Performs logical verification to detect risks that are syntactically correct but semantically dangerous, such as:
 
--Redundancy Checks: Flagging redundant privilege escalations like sudo su.
+- Redundancy Checks: Flagging redundant privilege escalations like sudo su.
 
--Context-Aware Permissions: Warning against high-risk commands like chmod 777 on sensitive system paths (e.g., /etc or /root).
+- Context-Aware Permissions: Warning against high-risk commands like chmod 777 on sensitive system paths (e.g., /etc or /root).
 
--Destructive Bounds: Detecting catastrophic operations such as recursive deletions targeted at the system root (rm -rf /).
+- Destructive Bounds: Detecting catastrophic operations such as recursive deletions targeted at the system root (rm -rf /).
 
 Tech Stack
 
--Language: Python 
+- Language: Python 
 
 
--Frontend: Streamlit (featuring real-time risk gauges and animations) 
+- Frontend: Streamlit (featuring real-time risk gauges and animations) 
 
--Data Visualization: Plotly 
+- Data Visualization: Plotly 
 
 
--Logic: Custom Lexer, Parser, and Semantic Engine 
+- Logic: Custom Lexer, Parser, and Semantic Engine 
 
 Why this matters
 By analyzing the Context (Semantics) and Structure (Syntax) of a script rather than just string matching, PRIVCHECK provides far superior protection against malformed or malicious system code.
